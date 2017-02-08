@@ -31,7 +31,7 @@ gulp.task('build-views', function() {
     var html = filter(['**/*.html'], {restore: true});
 
     return gulp.src(['src/**/*.html', '!src/partials/**'])
-        // .pipe(inject(gulp.src(['src/partials/head.html']), createInjectOptions('head')))
+        .pipe(inject(gulp.src(['src/partials/head.html']), createInjectOptions('head')))
         .pipe(useref({searchPath: ['.', '../', 'src']}))
         .pipe(inlineSource({rootpath: 'dist'}))
         .pipe(html)
