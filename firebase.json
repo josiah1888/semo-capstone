@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist",
+    "cleanUrls": true,
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      }
+    ]
+  }
+}
