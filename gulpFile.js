@@ -57,7 +57,7 @@ gulp.task('build-assets', function () {
         .pipe(uglify())
         .pipe(js.restore)
         .pipe(css)
-        .pipe(uncss({ html: ['src/**/*.html'], ignore: ['#sidebar.menu-active>.inner.menu', '#sidebar.menu-active'] }))
+        .pipe(uncss({ html: ['src/**/*.html'], ignore: [] }))
         .pipe(csso())
         .pipe(css.restore)
         .pipe(images)
