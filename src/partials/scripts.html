@@ -1,19 +1,28 @@
 <!-- build:js /lib/js/all.js -->
-<script src="lib/js/jquery.min.js"></script>
-<script src="lib/js/jquery.dropotron.min.js"></script>
-<script src="lib/js/jquery.scrollgress.min.js"></script>
-<script src="lib/js/jquery.scrolly.min.js"></script>
-<script src="lib/js/jquery.slidertron.min.js"></script>
-<script src="lib/js/skel.min.js"></script>
-<script src="lib/js/util.js"></script>
-<script src="lib/js/main.js"></script>
+<script src="/lib/js/jquery.min.js"></script>
+<script src="/lib/js/jquery.dropotron.min.js"></script>
+<script src="/lib/js/jquery.scrollgress.min.js"></script>
+<script src="/lib/js/jquery.scrolly.min.js"></script>
+<script src="/lib/js/jquery.slidertron.min.js"></script>
+<script src="/lib/js/skel.min.js"></script>
+<script src="/lib/js/util.js"></script>
+<script src="/lib/js/main.js"></script>
 <script src="/app.js"></script>
+<script src="/lib/js/firebase-3.6.9.js"></script>
 <!-- endbuild -->
 
 <script>
-if(navigator.userAgent.indexOf("Speed Insights") === -1) {
-   /* todotodo GA snippet */
-}
-</script>
+  if(navigator.userAgent.indexOf("Speed Insights") === -1) {
+    /* todotodo GA snippet */
+  }
 
+  var config = {
+    apiKey: "AIzaSyA0ZIapgh2fdTDHl19MxHCrYm0nYkIPA8M",
+    authDomain: "semo-capston-haiti.firebaseapp.com",
+    databaseURL: "https://semo-capston-haiti.firebaseio.com",
+    storageBucket: "semo-capston-haiti.appspot.com",
+    messagingSenderId: "179910104543"
+  };
+  firebase.initializeApp(config);
+</script>
 <!--[if lte IE 8]><script src="/lib/js/ie/respond.min.js"></script><![endif]-->

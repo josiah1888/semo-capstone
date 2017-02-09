@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Admin Login | Out of Proverty thru Education</title>
+
+  <!-- inject:head:html -->
+  <!-- endinject -->
+</head>
+
+<body>
+
+
+  <!-- inject:header:html -->
+  <!-- endinject -->
+
+  <!-- Main -->
+  <section id="main" class="wrapper style1">
+    <header class="major">
+      <h2>Admin Login</h2>
+    </header>
+    <div class="container">
+
+      <!-- Content -->
+      <section id="content">
+        <form action="javascript:loginAndRedirect();" id="LoginForm">
+          <div class="row uniform">
+            <div class="12u">
+              <input required type="email" name="email" id="email" value="" placeholder="Email" />
+            </div>
+            <div class="12u">
+              <input required type="password" name="password" id="password" value="" placeholder="Password" />
+            </div>
+            <div class="12u text-center display-none" id="LoginError">
+              <div class="alert warning">
+                <h2 class="warning">Uh Oh! We had a problem signing you in. </h2>
+                <h4 class="warning" id="LoginErrorMessage"></h4>
+              </div>
+            </div>
+            <div class="12u">
+              <button type="submit" class="button special fit">Login</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- inject:footer:html -->
+  <!-- endinject -->
+
+  <!-- inject:scripts:html -->
+  <!-- endinject -->
+
+  <script src="/account/login.js"></script>
+</body>
+
+</html>
