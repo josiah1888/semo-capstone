@@ -9,6 +9,7 @@
 <script src="/lib/js/main.js"></script>
 <script src="/app.js"></script>
 <script src="/lib/js/firebase-3.6.9.js"></script>
+<script src="/lib/js/webfont-1.6.26.js"></script>
 <!-- endbuild -->
 
 <script>
@@ -24,5 +25,15 @@
     messagingSenderId: "179910104543"
   };
   firebase.initializeApp(config);
+
+  WebFont.load({
+    google: {
+      families: ['Lato:300,700']
+    },
+    custom: {
+      families: ['FontAwesome'],
+      urls: ['/lib/css/fontawesome.min.css'],
+    }
+  });
 </script>
 <!--[if lte IE 8]><script src="/lib/js/ie/respond.min.js"></script><![endif]-->
