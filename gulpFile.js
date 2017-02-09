@@ -32,6 +32,7 @@ gulp.task('build-views', function () {
 
     return gulp.src(['src/**/*.html', '!src/partials/**'])
         .pipe(inject(gulp.src(['src/partials/head.html']), createInjectOptions('head')))
+        .pipe(inject(gulp.src(['src/partials/header.html']), createInjectOptions('header')))
         .pipe(inject(gulp.src(['src/partials/footer.html']), createInjectOptions('footer')))
         .pipe(inject(gulp.src(['src/partials/scripts.html']), createInjectOptions('scripts')))
         .pipe(inject(gulp.src(['src/partials/cta.html']), createInjectOptions('cta')))
