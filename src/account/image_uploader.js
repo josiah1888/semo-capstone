@@ -1,4 +1,4 @@
-var storageRef = firebase.storage().ref(image_gallery/);
+var storageRef = firebase.storage().ref('image_gallery/');
 
 
 var file = File();
