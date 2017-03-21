@@ -2791,12 +2791,11 @@
 /* Banner */
 
 	#banner {
-		background-attachment: scroll,						fixed;
 		background-color: #494d53;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: top left,					center center;
-		background-repeat: repeat,						no-repeat;
-		background-size: auto,						cover;
+		background-image: url("images/girl.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		color: #d1d2d4;
 		padding: 16em 0;
 		position: relative;
@@ -2904,7 +2903,7 @@
 
 		#cta h2 {
 			display: inline-block;
-			margin: 0 1em 0 0;
+			margin: 0;
 			vertical-align: middle;
 		}
 
