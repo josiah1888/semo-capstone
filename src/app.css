@@ -14,3 +14,8 @@
 .warning {
   color: red;
 }
+
+.viewer .reel .slide img {
+  height: 100%;
+  width: 100%;
+}

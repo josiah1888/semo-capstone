@@ -13,12 +13,12 @@ function getImagePaths(imageRefs) {
 function appendImages(paths) {
   var storage = firebase.storage().ref('');
 
-  paths.forEach(function (path) {
+  return Promise.all(paths.map(function (path) {
     // Create a reference to the file we want to download
     var starsRef = storage.child(path);
 
     // Get the download URL
-    starsRef.getDownloadURL().then(function (url) {
+    return starsRef.getDownloadURL().then(function (url) {
 
       $('.js-gallery').append(
         [
@@ -29,12 +29,12 @@ function appendImages(paths) {
           '</a>',
           '</span>',
           '</div>'
-        ].join()
+        ].join('')
       );
     }).catch(function (error) {
       console.error('Uh oh! problem fetching images', error);
     });
-  });
+  }));
 }
 
 function initFancybox() {
@@ -45,6 +45,6 @@ function initFancybox() {
 
 getImagesRefs()
   .then(function (imageRefs) { return getImagePaths(imageRefs.val()) })
-  .then(function (paths) { return appendImages(paths) })
-  .then(function () { initFancybox() })
+  .then(appendImages)
+  .then(initFancybox)
   .catch(function (err) { console.error('Uh oh! Errorzzz', err); });

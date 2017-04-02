@@ -57,7 +57,7 @@ gulp.task('build-assets', function () {
         .pipe(uglify())
         .pipe(js.restore)
         .pipe(css)
-        .pipe(uncss({ html: ['src/**/*.html'], ignore: [/\.fancybox.*/] }))
+        .pipe(uncss({ html: ['src/**/*.html'], ignore: [/\.fancybox.*/, '.viewer .reel .slide img'] }))
         .pipe(csso())
         .pipe(css.restore)
         .pipe(images)
