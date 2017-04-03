@@ -11,11 +11,11 @@
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		color: #2c2c2c;
+		font-weight: 800;
+		color: black;
 		font: inherit;
 		vertical-align: baseline;
 	}
-	
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -1602,7 +1602,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #545454;
+		color: #050404;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -1711,7 +1711,8 @@
 	}
 
 	header p {
-		color: #000000;
+		color: #050404;
+		font-weight: 600;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -1720,7 +1721,6 @@
 		font-size: 1.25em;
 		margin-top: -1em;
 		line-height: 1.75em;
-		color: #000000;
 	}
 
 	header h3 + p {
@@ -2066,6 +2066,8 @@
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
+		color: black;
+		font-weight: 450;
 		padding-left: 1em;
 	}
 
@@ -2530,7 +2532,7 @@
 	}
 
 		.wrapper.style1 {
-			background: #b4b4b4;
+			background: #878484;
 		}
 
 			.wrapper.style1 .box {
@@ -2795,7 +2797,7 @@
 
 	#banner {
 		background-color: #494d53;
-		background-image: url("images/girl.jpg");
+		background-image: url("images/3.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -3459,4 +3461,4 @@
 					display: block;
 				}
 
-	}
+	}		
