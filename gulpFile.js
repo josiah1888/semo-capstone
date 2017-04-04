@@ -71,10 +71,11 @@ gulp.task('sitemap', function (done) {
 
     var pages = [
         { url: '/' },
+        { url: '/gallery/' },
     ];
 
     var sitemap = sm.createSitemap({
-        hostname: 'https://todo.todo',
+        hostname: 'https://opte.us',
         urls: pages
     });
 
