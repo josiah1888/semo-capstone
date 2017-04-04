@@ -47,8 +47,7 @@
 		// Header.
 		// If the header is using "alt" styling and #banner is present, use scrollwatch
 		// to revert it back to normal styling once the user scrolls past the banner.
-			if ($header.hasClass('alt')
-			&&	$banner.length > 0) {
+			if ($header.hasClass('alt') &&	$banner.length > 0) {
 
 				$window.on('load', function() {
 
@@ -60,59 +59,11 @@
 						off:		function() { $header.removeClass('alt'); }
 					});
 
-					skel.on('change', function() {
-
-						if (skel.breakpoint('medium').active)
-							$banner.scrollwatchSuspend();
-						else
-							$banner.scrollwatchResume();
-
-					});
-
 				});
 
+			} else {
+				$header.removeClass('alt');
 			}
-
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				alignment: 'right'
-			});
-
-		// Off-Canvas Navigation.
-
-			// Title Bar.
-				$(
-					'<div id="navButton">' +
-						'<a href="#navPanel" class="toggle"></a>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Navigation Panel.
-				$(
-					'<div id="navPanel">' +
-						'<nav>' +
-							$('#nav').navList() +
-						'</nav>' +
-					'</div>'
-				)
-					.appendTo($body)
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'navPanel-visible'
-					});
-
-			// Fix: Remove transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#navPanel')
-						.css('transition', 'none');
-
 	});
 
 })(jQuery);
