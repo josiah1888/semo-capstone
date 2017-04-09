@@ -1713,16 +1713,8 @@ input[type="radio"] + label:before {
 
 .image.fit img {
 	display: block;
-	width: 9cm;
-	height:10cm;
-}
-.image.fit2 img {
-	display: block;
 	width: 100%;
-	
-	
 }
-
 
 /* List */
 
