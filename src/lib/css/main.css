@@ -1615,7 +1615,7 @@ input[type="radio"] + label:before {
 	padding: 2em;
 }
 
-.box >:last-child, .box >:last-child >:last-child, .box >:last-child >:last-child >:last-child {
+.box >:last-child, .box >:last-child >:last-child, .box >:last-child >:last-child >:last-child{
 	margin-bottom: 0;
 }
 
@@ -1631,7 +1631,7 @@ input[type="radio"] + label:before {
 	text-align: center;
 }
 
-.box.post .image:first-child {
+.box.post.image:first-child {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	margin: -2em 0 2em -2em;
@@ -1639,8 +1639,9 @@ input[type="radio"] + label:before {
 }
 
 .box.post .image:first-child img {
-	border-bottom-left-radius: 0;
+	border-bottom-left-radius: 80;
 	border-bottom-right-radius: 0;
+	
 }
 
 
@@ -1705,13 +1706,15 @@ input[type="radio"] + label:before {
 	display: block;
 	margin: 0 0 2em 0;
 	width: 100%;
+	padding-bottom:8%;
+	
+	
 }
 
 .image.fit img {
 	display: block;
 	width: 100%;
 }
-
 
 /* List */
 

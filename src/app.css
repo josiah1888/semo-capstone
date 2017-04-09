@@ -38,3 +38,14 @@ header {
     display: none; 
   }
 }
+
+.image.fit2 img {
+	display: block;
+	width: 100%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
