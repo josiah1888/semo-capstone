@@ -3,54 +3,6 @@
 
 <head>
 	<title>Account | Out of Proverty thru Education</title>
-	<style>
-		/* layout.css Style */
-		
-		.upload-drop-zone {
-			height: 200px;
-			border-width: 2px;
-			margin-bottom: 20px;
-		}
-		/* skin.css Style*/
-		
-		.upload-drop-zone {
-			color: #ccc;
-			border-style: dashed;
-			border-color: #ccc;
-			line-height: 200px;
-			text-align: center
-		}
-		
-		.upload-drop-zone.drop {
-			color: #222;
-			border-color: #222;
-		}
-		
-		.image-preview-input {
-			position: relative;
-			overflow: hidden;
-			margin: 0px;
-			color: #333;
-			background-color: #fff;
-			border-color: #ccc;
-		}
-		
-		.image-preview-input input[type=file] {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0;
-			padding: 0;
-			font-size: 20px;
-			cursor: pointer;
-			opacity: 0;
-			filter: alpha(opacity=0);
-		}
-		
-		.image-preview-input-title {
-			margin-left: 2px;
-		}
-	</style>
 	<!-- inject:head:html -->
 	<!-- endinject -->
 </head>
@@ -64,33 +16,26 @@
 	<!-- Main -->
 	<section id="main" class="wrapper style1">
 		<header class="major">
-			<h2>No Sidebar</h2>
+			<h2>Gallery</h2>
 			<p>Faucibus neque adipiscing mi lorem semper blandit</p>
 		</header>
 		<div class="container">
 
 			<!-- Content -->
 			<section id="content">
-				<a href="#" class="image fit"><img src="/images/pic07.jpg" alt="" /></a>
-				<h3>Image Upload</h3>
-				<p>To add images to the gallery, you can either manually select them from a file or by dragging and dropping into the box.</p>
 
-				<div class="container"> <br />
-					<div class="row">
+				<h1>Welcome to the Admin Account Page!</h1>
 
-						<div class="col-md-12">
-							<div class="panel panel-default">
-								<div class="panel-heading"><strong>Upload files</strong> <small> </small></div>
-								<div class="panel-body">
-								</div>
-							</div>
-						</div>
-
-
-
-					</div>
+				<div>
+					<h5>Upload to the home page</h5>
+					<input class="file-uploader" data-gallery="home_page_gallery" type="file" name="files[]" data-url="/standing-upload-url"
+					 multiple>
 				</div>
-				</container>
+
+				<div>
+					<h5>Upload to the gallery page</h5>
+					<input class="file-uploader" data-gallery="image_gallery" type="file" name="files[]" data-url="/standing-upload-url" multiple>
+				</div>
 			</section>
 
 		</div>
@@ -102,7 +47,8 @@
 	<!-- inject:scripts:html -->
 	<!-- endinject -->
 
-	<script src="/lib/js/dropzone.min.js"></script>
+	<script src="/lib/js/jquery.ui.widget.js"></script>
+	<script src="/lib/js/jquery.fileupload.js"></script>
 	<script src="/account/account.js"></script>
 </body>
 
