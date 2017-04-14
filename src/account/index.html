@@ -2,53 +2,7 @@
 <html>
 
 <head>
-	<title>Account | Out of Proverty thru Education</title>
-	<style>
-	/* layout.css Style */
-			.upload-drop-zone {
-  				height: 200px;
-  				border-width: 2px;
-  				margin-bottom: 20px;
-			}
-
-			/* skin.css Style*/
-			.upload-drop-zone {
-  				color: #ccc;
-  				border-style: dashed;
-  				border-color: #ccc;
-  				line-height: 200px;
-  				text-align: center
-			}
-			.upload-drop-zone.drop {
-  				color: #222;
-  				border-color: #222;
-			}
-
-
-
-			.image-preview-input {
-    			position: relative;
-    			overflow: hidden;
-    			margin: 0px;    
-    			color: #333;
-    			background-color: #fff;
-    			border-color: #ccc;    
-			}
-			.image-preview-input input[type=file] {
-				position: absolute;
-				top: 0;
-				right: 0;
-				margin: 0;
-				padding: 0;
-				font-size: 20px;
-				cursor: pointer;
-				opacity: 0;
-				filter: alpha(opacity=0);
-			}
-			.image-preview-input-title {
-    			margin-left:2px;
-			}
-	</style>
+	<title>Account | Out of Poverty thru Education</title>
 	<!-- inject:head:html -->
 	<!-- endinject -->
 </head>
@@ -62,59 +16,26 @@
 	<!-- Main -->
 	<section id="main" class="wrapper style1">
 		<header class="major">
-			<h2>No Sidebar</h2>
+			<h2>Gallery</h2>
 			<p>Faucibus neque adipiscing mi lorem semper blandit</p>
 		</header>
 		<div class="container">
 
 			<!-- Content -->
 			<section id="content">
-				<a href="#" class="image fit"><img src="/images/pic07.jpg" alt="" /></a>
-				<h3>Image Upload</h3>
-				<p>To add images to the gallery, you can either manually select them from a file or by dragging and dropping into the box.</p>
 
-		<div class="container"> <br />
-    		<div class="row">
+				<h1>Welcome to the Admin Account Page!</h1>
 
-    			<div class="col-md-12">
-					<div class="panel panel-default">
-						<div class="panel-heading"><strong>Upload files</strong> <small> </small></div>
-						<div class="panel-body">
-							<div class="input-group image-preview">
-								<input placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
-								<!-- don't give a name === doesn't send on POST/GET --> 
-								<span class="input-group-btn"> 
-								<!-- image-preview-clear button -->
-								<button type="button" class="btn btn-default image-preview-clear" style="display:none;"> <span class="glyphicon glyphicon-remove"></span> Clear </button>
-								<!-- image-preview-input -->
-								<div class="btn btn-default image-preview-input"> <span class="glyphicon glyphicon-folder-open"></span> <span class="image-preview-input-title">Browse</span>
-							<input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
-									<!-- rename it --> 
-								</div>
-								<button type="button" class="btn btn-labeled btn-primary"> <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload</button>
-								</span> </div>
-							<!-- /input-group image-preview [TO HERE]--> 
-					
-							<br />
-					
-							<!-- Drop Zone -->
-							<div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here </div>
-							<br />
-							<!-- Progress Bar -->
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
-							</div>
-							<br />
-
-						</div>
-					</div>
+				<div>
+					<h5>Upload to the home page</h5>
+					<input class="file-uploader" data-gallery="home_page_gallery" type="file" name="files[]" data-url="/standing-upload-url"
+					 multiple>
 				</div>
-        
-        
-        
-			</div>
-		</div>
-		</container> 
+
+				<div>
+					<h5>Upload to the gallery page</h5>
+					<input class="file-uploader" data-gallery="image_gallery" type="file" name="files[]" data-url="/standing-upload-url" multiple>
+				</div>
 			</section>
 
 		</div>
@@ -126,6 +47,8 @@
 	<!-- inject:scripts:html -->
 	<!-- endinject -->
 
+	<script src="/lib/js/jquery.ui.widget.js"></script>
+	<script src="/lib/js/jquery.fileupload.js"></script>
 	<script src="/account/account.js"></script>
 </body>
 
