@@ -23,10 +23,10 @@ function appendImages(paths, gallery) {
 
       gallery.append(
         [
-          '<div class="4u 6u(small)">',
+          '<div class="6u 10u(small)">',
           '<span class="image fit">',
           '<a data-fancybox="gallery" href="' + url + '">',
-          '<img src="' + url + '" alt="" />',
+		  '<img src="' + url + '" alt="" style="width:512px;height:512px;"/>',
           '</a>',
           '</span>',
           '</div>'
