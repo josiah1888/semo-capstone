@@ -1,5 +1,6 @@
-function getImagesRefs() {
-  var dbRef = firebase.database().ref('image_gallery');
+function getImagesRefs(gallery) {
+  var ref = gallery.data('imageref');
+  var dbRef = firebase.database().ref(ref);
   return dbRef.once('value');
 }
 
@@ -10,7 +11,7 @@ function getImagePaths(imageRefs) {
   );
 }
 
-function appendImages(paths) {
+function appendImages(paths, gallery) {
   var storage = firebase.storage().ref('');
 
   return Promise.all(paths.map(function (path) {
@@ -20,7 +21,7 @@ function appendImages(paths) {
     // Get the download URL
     return starsRef.getDownloadURL().then(function (url) {
 
-      $('.js-gallery').append(
+      gallery.append(
         [
           '<div class="4u 6u(small)">',
           '<span class="image fit">',
@@ -43,8 +44,10 @@ function initFancybox() {
   });
 }
 
-getImagesRefs()
-  .then(function (imageRefs) { return getImagePaths(imageRefs.val()) })
-  .then(appendImages)
-  .then(initFancybox)
-  .catch(function (err) { console.error('Uh oh! Errorzzz', err); });
+$('.js-gallery').each(function (index, gallery) {
+  getImagesRefs($(gallery))
+    .then(function (imageRefs) { return getImagePaths(imageRefs.val()) })
+    .then(function (imagePaths) { return appendImages(imagePaths, $(gallery)); })
+    .then(initFancybox)
+    .catch(function (err) { console.error('Uh oh! Errorzzz', err); });
+});
