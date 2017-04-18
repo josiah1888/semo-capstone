@@ -75,7 +75,7 @@ gulp.task('sitemap', function (done) {
     ];
 
     var sitemap = sm.createSitemap({
-        hostname: 'https://opte.us',
+        hostname: 'https://outofpovertythrueducation.org',
         urls: pages
     });
 
