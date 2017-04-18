@@ -20,11 +20,3 @@ Next, install some Node tools (we call them _node modules_)
 3. Install node modules `npm install`
 4. Build code; start server `npm start`
 5. Navigate to [localhost:8080](http://localhost:8080) to see the site
-
-# Deployment
-
-```sh
-# From working directory...
-gulp build
-firebase deploy
-```
