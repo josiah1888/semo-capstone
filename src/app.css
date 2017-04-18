@@ -49,3 +49,6 @@ header {
     flex-wrap: wrap;
     align-items: center;
 }
+.wrapper.style1 {
+	background: #cccccc;
+}
