@@ -34,7 +34,6 @@ function uploadToFirebase(gallery, files) {
 }
 
 function addToIndex(index, filePath) {
-  debugger;
   var dbRef = firebase.database().ref(index);
   dbRef.push(filePath);
 }
