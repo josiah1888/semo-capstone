@@ -1,25 +1,5 @@
 # User Manual
 
-<<<<<<< HEAD
-Here is everything you might need to own and operate the OPTE project.
-
--updating slideshow images on the landing page:
-	-Go to the url opte.us
-	-scroll to the bottom of the page, and click the link "Admin Login"
-	-Sign in with the administrative credintials
-	-Click the button that says "Choose files" under the Upload to home page text
-	-choose your files, and click submit
-	
-	
--uploading images to the gallery page
-	-Go to the url opte.us
-	-scroll to the bottom of the page, and click the link "Admin Login"
-	-Sign in with the administrative credintials
-	-Click the button that says "Choose files" under the Upload to gallery page text	
-	-choose your files, and click submit
-	
-After you have done this your images will be updated.  
-=======
 Here is a handy list of how-tos for the user
 
  # Updating slideshow images on the landing page:
@@ -36,5 +16,4 @@ Here is a handy list of how-tos for the user
   4. Click the button that says "Choose files" under the Upload to gallery page text	
   5. choose your files, and click submit
 	
-After you have done this your images will magically be updated.  
->>>>>>> origin/master
+After you have done this your images will magically be updated.
