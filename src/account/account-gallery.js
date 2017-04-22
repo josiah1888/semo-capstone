@@ -29,6 +29,7 @@ function appendImages(paths, gallery) {
           '<img src="' + url + '" alt="" />',
           '</a>',
           '</span>',
+          '<button type="button" class="btn btn-danger js-deleteImage" data-path="' + path + '">Delete</button>',
           '</div>'
         ].join('')
       );
@@ -42,6 +43,29 @@ function initFancybox() {
   $('[data-fancybox]').fancybox({
     // Options will go here
   });
+  return Promise.resolve();
+}
+
+function handleDeleteImage() {
+  $('.js-deleteImage').on('click', function () {
+    var self = this
+    var baseRef = $(this).closest('.js-gallery').data('imageref');
+    var path = $(this).data('path');
+
+    getImagesRefs($(this).closest('.js-gallery'))
+      .then(function (imageRef) {
+        var images = imageRef.val();
+        return Promise.resolve(Object.keys(images)
+          .filter(function (key) { return images[key] === path; })
+          .map(function (key) { return { key: key, value: images[key] }; })[0]
+        )
+      })
+      .then(function (imageRef) {
+        var dbRef = firebase.database().ref(baseRef + '/' + imageRef.key);
+        dbRef.remove();
+        $(self).closest('div').hide(750);
+      });
+  });
 }
 
 $('.js-gallery').each(function (index, gallery) {
@@ -49,5 +73,6 @@ $('.js-gallery').each(function (index, gallery) {
     .then(function (imageRefs) { return getImagePaths(imageRefs.val()) })
     .then(function (imagePaths) { return appendImages(imagePaths, $(gallery)); })
     .then(initFancybox)
+    .then(handleDeleteImage)
     .catch(function (err) { console.error('Uh oh! Errorzzz', err); });
 });

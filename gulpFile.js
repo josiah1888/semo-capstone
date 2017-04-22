@@ -57,7 +57,11 @@ gulp.task('build-assets', function () {
         .pipe(uglify())
         .pipe(js.restore)
         .pipe(css)
-        .pipe(uncss({ html: ['src/**/*.html'], ignore: [/\.fancybox.*/, '.viewer .reel .slide img'] }))
+        .pipe(uncss({
+            html: ['src/**/*.html'], ignore: [
+                /\.fancybox.*/, '.viewer .reel .slide img', '.btn', '.btn-danger', '.account-page .image.fit', '.account-page .btn-danger'
+            ]
+        }))
         .pipe(csso())
         .pipe(css.restore)
         .pipe(images)
@@ -75,7 +79,7 @@ gulp.task('sitemap', function (done) {
     ];
 
     var sitemap = sm.createSitemap({
-        hostname: 'https://opte.us',
+        hostname: 'https://outofpovertythrueducation.org',
         urls: pages
     });
 
