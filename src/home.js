@@ -22,11 +22,7 @@ function appendImages(paths) {
       var gallery$ = $('.js-homePageGallery');
 
       gallery$.append(
-        [
-          '<div class="slide">',
-          '<img src="' + url + '" alt=""  />',
-          '</div>',
-        ].join('')
+        '<div class="slide" style="background-image: url(' + url + ')"></div>'
       );
     }).catch(function (error) {
       console.error('Uh oh! problem fetching images', error);

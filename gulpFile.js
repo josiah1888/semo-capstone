@@ -59,7 +59,7 @@ gulp.task('build-assets', function () {
         .pipe(css)
         .pipe(uncss({
             html: ['src/**/*.html'], ignore: [
-                /\.fancybox.*/, '.viewer .reel .slide img', '.btn', '.btn-danger', '.account-page .image.fit', '.account-page .btn-danger'
+                /\.fancybox.*/, '.viewer .reel .slide img', '.btn', '.btn-danger', '.account-page .image.fit', '.account-page .btn-danger', '.home-page .slide'
             ]
         }))
         .pipe(csso())

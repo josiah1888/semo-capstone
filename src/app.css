@@ -87,3 +87,8 @@ header {
 .account-page .btn-danger {
   width: 100%;
 }
+
+.home-page .slide {
+  background-position: center center;
+  background-size: cover;
+}
